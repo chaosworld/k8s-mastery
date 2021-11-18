@@ -8,6 +8,7 @@ import Polarity from "./components/Polarity";
 
 const style = {
     marginLeft: 12,
+    backgroundColor: '#555',
 };
 
 class App extends Component {
@@ -20,7 +21,8 @@ class App extends Component {
     };
 
     analyzeSentence() {
-        fetch('http://localhost:8080/sentiment', {
+	//fectch('http://localhost:8080/sentiment', {
+        fetch(window.location.origin + '/sentiment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

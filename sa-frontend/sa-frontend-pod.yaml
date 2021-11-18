@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: sa-frontend
+    labels:
+        app: sa-frontend
+spec:
+    containers:
+        - image: pi3sme/sentiment-analysis-frontend:1.0
+          name: sa-frontend
+          env:
+              - name: WEBAPP_HOST
+                value: "43.132.179.204"
+              - name: WEBAPP_PORT
+                value: "3000"
+          ports:
+              - containerPort: 80
+
